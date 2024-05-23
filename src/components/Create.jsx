@@ -1,10 +1,15 @@
 import { nanoid } from "nanoid";
+import { useContext } from "react";
 
 
 import { useState } from 'react'
+import { textcontext } from "../Context/TextContext";
 
 
-const Create = ({tasks,settasks })=>{
+const Create = ()=>{
+
+  const [tasks,settasks] = useContext(textcontext)
+
   const [title,settitle] = useState("")
   const [email,setemail] = useState("")
   const [contact,setcontact] = useState("")

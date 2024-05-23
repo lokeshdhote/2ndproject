@@ -1,6 +1,8 @@
+import { useContext } from "react";
+import { textcontext } from "../Context/TextContext";
 
-const Shows= ({tasks,settasks})=>{
-
+const Shows= ()=>{
+const [tasks,settasks] = useContext(textcontext)
 
 
   const deleteTasks = (id)=>{
